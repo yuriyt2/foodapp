@@ -24,7 +24,16 @@ class FoodsController < ApplicationController
   end
 #      food GET    /foods/:id(.:format)      foods#show
 
+  def edit
+    @food = Food.find(params[:id])
+  end
+
+
   def update
+    @food = Food.find(params[:id])
+    @food.update(food_params)
+    redirect_to food_path(@food)
+
   end
 #           PATCH  /foods/:id(.:format)      foods#update
 #           PUT    /foods/:id(.:format)      foods#update
@@ -32,7 +41,7 @@ def destroy
   @food = Food.find(params[:id])
   @food.destroy
   flash.notice = "Your food has been destroyed!"
-  redirect_to foods_path 
+  redirect_to foods_path
 end
 #           DELETE /foods/:id(.:format)      foods#destroy
 

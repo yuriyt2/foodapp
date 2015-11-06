@@ -1,4 +1,6 @@
-<center><%= button_to "Back To Foods","/foods",method: :get %><%= button_to "This Food Sucks", food_path(@food), method: :delete %></center>
+<center><%= button_to "Back To Foods","/foods",method: :get %>
+  <%= button_to "Update This Food", edit_food_path,method: :get%>
+<%= button_to "This Food Sucks", food_path(@food), method: :delete %></center>
 
 <h1><%=@food.name %></h1>
 <p id="food">
