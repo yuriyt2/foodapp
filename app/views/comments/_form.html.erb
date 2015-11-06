@@ -1,10 +1,6 @@
 <h3>Post a Comment</h3>
 
-<%= form_for [ @food, @comment ] do |f| %>
-  <p>
-    <%= f.label :author_name %><br/>
-    <%= f.text_field :author_name %>
-  </p>
+<%= form_for [@food,@comment] do |f| %>
   <p>
     <%= f.label :body %><br/>
     <%= f.text_area :body %>

@@ -1,5 +1,6 @@
-<h1>All the foods fit for print</h1>
+<h1>All the foods</h1>
 
+<%=button_to "Create a New Food", "foods/new", method: :get%>
 
 <ul>
   <% for img in @foods do %>
@@ -13,3 +14,5 @@
   <% end %>
 
 </ul>
+
+<p><%= button_to "Log Out", "/sessions", method: :delete%></p>

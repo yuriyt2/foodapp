@@ -1,0 +1,7 @@
+
+
+<div class="comment">
+
+  <h4>Comment by <%=User.find(comments.user_id).username%>, <%= distance_of_time_in_words(comments.food.created_at, comments.created_at)%> ago. </h4>
+  <p> <%= comments.body %></p>
+</div>
