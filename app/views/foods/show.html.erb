@@ -1,0 +1,11 @@
+<a href="/">Home</a>
+<h1><%=@food.name %></h1>
+<p>
+<%= image_tag @food.image.url %><br>
+Cost: $<%= @food.price %><br>
+Where to find it: <%= @food.location %>
+</p>
+
+<h3>Comments</h3>
+<%= render partial: 'foods/comments', collection: @food.comments %>
+<%= render partial: 'comments/form' %>

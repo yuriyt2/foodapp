@@ -1,0 +1,15 @@
+<h1>All the foods fit for print</h1>
+
+
+<ul>
+  <% for img in @foods do %>
+  <li>
+
+  <a href="/foods/<%=img.id%>"><%= image_tag img.image.url %><br></a>
+    <%=  "#{img.name} - $#{img.price}"%>
+  </li>
+
+
+  <% end %>
+
+</ul>
