@@ -5,6 +5,7 @@ class FoodsController < ApplicationController
 #     foods GET    /foods(.:format)          foods#index
   def index
     @foods = Food.all.shuffle
+    @weather = HTTParty.get("http://api.wunderground.com/api/#{WEATHER}/conditions/q/10010.json")
   end
 #           POST   /foods(.:format)          foods#create
   def create

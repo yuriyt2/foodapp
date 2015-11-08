@@ -1,16 +1,19 @@
-<h1>Get This Lunch, Fool!</h1>
-<h2>The Lunch Finding Assistant</h2>
-
+<h1>Get This Lunch!</h1>
+<h3>The Lunch Finding Assistant</h3>
+<br>
+<div>
 <h4>User Login</h4>
 <p>
 <%= form_tag '/sessions', method: :post do %>
-<%= label_tag :username %>
+<%= label_tag :username%>
 <%= text_field_tag :username%><br>
 <%= label_tag :password %>
 <%= password_field_tag :password%><br>
 
-<%= submit_tag "Log in"%>
+<%= submit_tag "Log in"%>   
 <% end %>
+<%= button_to "New User", new_user_path, method: :get%>
 
-<%= button_to "Create New User", new_user_path, method: :get%>
+
 </p>
+</div>

@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background: url(https://s-media-cache-ak0.pinimg.com/236x/8c/3a/9c/8c3a9c2fb4650bf822f9ffbe0c1cb890.jpg);
+   background: url(https://s-media-cache-ak0.pinimg.com/236x/8c/3a/9c/8c3a9c2fb4650bf822f9ffbe0c1cb890.jpg);
+  //background: url(https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/27/277/277258/pattern-with-hand-drawn-fast-food-f.jpg?1418939372);
+
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 22px;
   text-align: center;
@@ -11,29 +13,95 @@ body {
 img {
   width: 300px;
   height: 230px;
-  border: 5px solid grey;
   border-radius: 15px;
+  box-shadow: 4px 4px grey;
 }
 
 li {
     color: charcoal;
     display: inline-block;
     text-align: center;
+    margin: 5px;
 }
 
-h1,h2,h3,h4{
-  text-align: center;
-}
 
 p {
   text-align: center;
 }
 
 .comment {
-  background-color: grey;
-
+  background-color: white;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  box-shadow: 5px 5px grey;
 }
 
-.food {
+#food_img {
+  width: 600px;
+  height: 460px;
+  box-shadow: 7px 7px grey;
+}
+
+#weather {
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
+.buttons {
+  background-color: white;
+  width: 180px;
+  font-size: 15px;
+  height: 35px;
+  border-radius: 10px;
+  border-color: charcoal;
+}
+
+
+#bug {
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 5px solid;
+  box-shadow: 0px 0px;
+  border: 2px solid gray;
+}
+
+#text_comment {
   width: 500px;
+  height: 200px;
+  box-shadow: 5px 5px grey;
+}
+
+
+.text_areas {
+  width: 200px;
+  height: 100px;
+}
+
+.text_fields {
+  width: 200px;
+}
+
+
+
+// Make stuff shrink manually!
+
+@media (max-width: 500px) {
+  body {
+    font-size: 12px;
+  }
+  img {
+    width: 150px;
+    height: 115px;
+  }
+  #food_img {
+    width: 300px;
+    height: 230px;
+  }
+  .comment {
+    width: 300px;
+  }
 }

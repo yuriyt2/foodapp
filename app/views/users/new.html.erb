@@ -4,9 +4,9 @@
 
 <%=form_for @user do |f| %>
 <%=f.label :username %>
-<%=f.text_area :username %>
+<%=f.text_field :username %><br>
 <%=f.label :password %>
-<%=f.password_field :password %>
-<%=f.submit "Create" %>
+<%=f.password_field :password %><br><br>
+<%=f.submit "Create User" %>
 
 <%end %>

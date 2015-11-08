@@ -1,9 +1,9 @@
-<h3>Post a Comment</h3>
+
 
 <%= form_for [@food,@comment] do |f| %>
   <p>
-    <%= f.label :body %><br/>
-    <%= f.text_area :body %>
+    <%= f.label :body, "Logged in as: #{current_user.username}. Enter your comment below." %><br/><br>
+    <%= f.text_area :body, id: "text_comment", :placeholder => "Yum, this food is awesome!" %>
   </p>
   <p>
     <%= f.submit 'Submit' %>

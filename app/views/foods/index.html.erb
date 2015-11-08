@@ -1,13 +1,21 @@
-<h1>All the foods</h1>
 
-<%=button_to "Create a New Food", "foods/new", method: :get%>
+<div id="weather">
+   <img id="bug" src="<%=@weather["current_observation"]["icon_url"] %>" alt="" /><br>
+<%=@weather["current_observation"]["temp_f"].to_i %>° F     <br>
+<%= %>
+</div>
+
+
+<h1>Get This Lunch, <%= current_user.username.capitalize%>!</h1>
+<h5>Click on an image to find out where to get this lunch.</h5>
+
 
 <ul>
   <% for img in @foods do %>
   <li>
 
   <a href="/foods/<%=img.id%>"><%= image_tag img.image.url %><br></a>
-    <%=  "#{img.name} - $#{img.price}"%>
+    <%=  "#{img.name} - #{number_to_currency(img.price)}"%>
   </li>
 
 
@@ -15,4 +23,7 @@
 
 </ul>
 
-<p><%= button_to "Log Out", "/sessions", method: :delete%></p>
+<ul>
+  <li><%=button_to "Add a New Food", "foods/new", :class => "buttons", method: :get%></li>
+  <li><%= button_to "Log Out", "/sessions", :class => "buttons", method: :delete%></li>
+</ul>

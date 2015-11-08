@@ -1,0 +1,1 @@
+WEATHER = ENV["MY_API_KEY"]

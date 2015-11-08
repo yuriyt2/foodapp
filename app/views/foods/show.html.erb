@@ -1,16 +1,19 @@
-<center><%= button_to "Back To Foods","/foods",method: :get %>
-  <%= button_to "Update This Food", edit_food_path,method: :get%>
-<%= button_to "This Food Sucks", food_path(@food), method: :delete %></center>
+<ul>
+  <li><%= button_to "Back To Foods","/foods", :class => "buttons", method: :get %></li>
+  <li><%= button_to "Update This Food", edit_food_path, :class => "buttons", method: :get%></li>
+  <li><%= button_to "This Food Sucks", food_path(@food), :class => "buttons", method: :delete %></li>
+</ul>
 
-<h1><%=@food.name %></h1>
-<p id="food">
-<%= image_tag @food.image.url %></p>
+<h1>Get this <%=@food.name %>, yo!</h1>
 <p>
-Cost: $<%= @food.price %><br>
+<%= image_tag @food.image.url, :id => "food_img" %>
+</p>
+<p>
+Cost: <%= number_to_currency(@food.price) %><br><br>
 Where to find it: <%= @food.location %>
-
-<center></center>
+</p><br>
 
 <h2>Comments</h2>
+
 <%= render partial: 'comments/comments', collection: @food.comments %>
 <%= render partial: 'comments/form' %>
