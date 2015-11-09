@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+left = 11500
+var walkingPony = function() {
+  var pony = $('#pony');
+  left = left - 10
+  $(pony).css("left", left + "px")
+  $(pony).css("top", "150px")
+  if (left < -120000) {
+    left = 120000
+  }
+};
+setInterval(walkingPony,10)

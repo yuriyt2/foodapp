@@ -9,7 +9,9 @@
 <h1>Get This Lunch, <%= current_user.username.capitalize%>!</h1>
 <h5>Click on an image to find out where to get this lunch.</h5>
 
-
+<div>
+  <img id="pony" src="http://dash.ponychan.net/chan/files/src/136167943291.gif" alt="pony!!">
+</div>
 <ul>
   <% for img in @foods do %>
   <li>
