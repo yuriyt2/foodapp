@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 
 #This adds images
-gem 'paperclip'
+gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 
 #This is for AWS S3 access
 gem 'aws-sdk', '~> 1.66'
