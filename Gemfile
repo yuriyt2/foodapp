@@ -30,7 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip'
 
 #This is for AWS S3 access
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 
 #For heroku
 gem 'rails_12factor'
