@@ -29,7 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 #This adds images
 gem 'paperclip'
 #This is for AWS S3 access
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
 
 #For heroku
 gem 'rails_12factor'
