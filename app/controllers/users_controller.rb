@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+skip_before_action :authenticate
 
   def index
 
@@ -10,8 +11,14 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.save
+    if @user.save
     redirect_to users_path
+    flash.notice = "*please enter your username and password*"
+    else
+      flash.notice = "*please enter a valid username/password*"
+      render new_user_path
+
+    end
   end
 
   def profile

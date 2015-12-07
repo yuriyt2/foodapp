@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+skip_before_action :authenticate
+
 
   def create
     username = params[:username]
@@ -8,6 +10,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to foods_path
       else
+        flash.notice = "*incorrect username or password*"
         redirect_to users_path
       end
   end

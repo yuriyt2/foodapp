@@ -25,4 +25,4 @@ var walkingPony = function() {
     left = 120000
   }
 };
-setInterval(walkingPony,10)
+setInterval(walkingPony,100)
