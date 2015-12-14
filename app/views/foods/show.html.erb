@@ -6,10 +6,8 @@
 <%flash.each do |message_type, message| %>
    <div class="alert"-<%= message_type %>"><h4><%= message %></h4></div>
  <% end %>
-<div>
-  <img id="pony" src="http://dash.ponychan.net/chan/files/src/136167943291.gif" alt="pony!!">
-</div>
-<h1>Get this <%=@food.name %>, yo!</h1>
+
+<h1>Get this <%=@food.name %>, !</h1>
 <p>
 <%= image_tag @food.image.url, :id => "food_img" %>
 </p>
