@@ -23,6 +23,9 @@
 + HTTParty
 + Accu-Weather API
 
+### Deployment URL
+[Get This Lunch](https://getthislunch.herokuapp.com/)
+
 ### Setup
 To test the app out locally:
 
