@@ -33,4 +33,5 @@ To test the app out locally:
 2. An Accu-Weather API key is necessary to run locally.  Comment out the weather widget on the foods view if you do not have one.
 2. Run a Rails server from the app folder.
 3. Run a Postres SQL server.
+4. Bundle install, rake db:create, rake db:migrate.
 4. Create a user account and log in.
